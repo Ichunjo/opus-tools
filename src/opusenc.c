@@ -518,15 +518,19 @@ int main(int argc, char **argv)
           save_cmd=0;
         } else if (strcmp(optname, "bitrate")==0) {
           bitrate=(opus_int32)(atof(optarg)*1000.);
+          save_cmd=0;
         } else if (strcmp(optname, "hard-cbr")==0) {
           with_hard_cbr=1;
           with_cvbr=0;
+          save_cmd=0;
         } else if (strcmp(optname, "cvbr")==0) {
           with_cvbr=1;
           with_hard_cbr=0;
+          save_cmd=0;
         } else if (strcmp(optname, "vbr")==0) {
           with_cvbr=0;
           with_hard_cbr=0;
+          save_cmd=0;
         } else if (strcmp(optname, "help")==0) {
           usage();
           exit(0);
